@@ -1,0 +1,275 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        color-scheme: dark;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    * {
+        @apply transition-colors duration-200;
+    }
+}
+
+@layer utilities {
+    .pmc-grid {
+        background-image:
+            linear-gradient(to right, rgba(148, 163, 184, 0.08) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(148, 163, 184, 0.08) 1px, transparent 1px);
+        background-size: 48px 48px;
+        mask-image: radial-gradient(60% 60% at 50% 35%, rgba(0,0,0,1) 20%, rgba(0,0,0,0) 70%);
+        animation: pmc-grid-move 20s linear infinite;
+    }
+
+    @keyframes pmc-grid-move {
+        0% { background-position: 0 0; }
+        100% { background-position: 48px 48px; }
+    }
+
+    .pmc-shimmer {
+        background-size: 200% 200%;
+        animation: pmc-shimmer 10s ease infinite;
+    }
+
+    @keyframes pmc-shimmer {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
+    /* Fade In Animations */
+    .pmc-fade-in {
+        opacity: 0;
+        animation: pmc-fade-in 0.8s ease-out forwards;
+    }
+
+    .pmc-fade-in.pmc-visible {
+        opacity: 1;
+    }
+
+    @keyframes pmc-fade-in {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .pmc-fade-in-up {
+        opacity: 0;
+        animation: pmc-fade-in-up 0.8s ease-out forwards;
+    }
+
+    .pmc-fade-in-up.pmc-visible {
+        opacity: 1;
+    }
+
+    @keyframes pmc-fade-in-up {
+        from {
+            opacity: 0;
+            transform: translateY(40px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .pmc-fade-in-left {
+        opacity: 0;
+        animation: pmc-fade-in-left 0.8s ease-out forwards;
+    }
+
+    .pmc-fade-in-left.pmc-visible {
+        opacity: 1;
+    }
+
+    @keyframes pmc-fade-in-left {
+        from {
+            opacity: 0;
+            transform: translateX(-40px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    .pmc-fade-in-right {
+        opacity: 0;
+        animation: pmc-fade-in-right 0.8s ease-out forwards;
+    }
+
+    .pmc-fade-in-right.pmc-visible {
+        opacity: 1;
+    }
+
+    @keyframes pmc-fade-in-right {
+        from {
+            opacity: 0;
+            transform: translateX(40px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    .pmc-scale-in {
+        opacity: 0;
+        transform: scale(0.9);
+        animation: pmc-scale-in 0.6s ease-out forwards;
+    }
+
+    .pmc-scale-in.pmc-visible {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    @keyframes pmc-scale-in {
+        from {
+            opacity: 0;
+            transform: scale(0.9);
+        }
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    /* Hover Effects */
+    .pmc-hover-lift {
+        @apply transition-all duration-300 ease-out;
+    }
+
+    .pmc-hover-lift:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px -12px rgba(13, 148, 136, 0.3);
+    }
+
+    .pmc-hover-glow {
+        @apply transition-all duration-300;
+    }
+
+    .pmc-hover-glow:hover {
+        box-shadow: 0 0 30px rgba(13, 148, 136, 0.4);
+    }
+
+    .pmc-hover-scale {
+        @apply transition-transform duration-300 ease-out;
+    }
+
+    .pmc-hover-scale:hover {
+        transform: scale(1.05);
+    }
+
+    /* Button Animations */
+    .pmc-btn-primary {
+        @apply relative overflow-hidden transition-all duration-300;
+    }
+
+    .pmc-btn-primary::before {
+        content: '';
+        @apply absolute inset-0 bg-gradient-to-r from-pmc-teal to-pmc-emerald opacity-0 transition-opacity duration-300;
+        transform: translateX(-100%);
+    }
+
+    .pmc-btn-primary:hover::before {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .pmc-btn-primary span {
+        @apply relative z-10;
+    }
+
+    /* Gradient Text Animation */
+    .pmc-gradient-text {
+        @apply bg-gradient-to-r from-pmc-teal via-pmc-emerald to-pmc-teal bg-clip-text text-transparent;
+        background-size: 200% auto;
+        animation: pmc-gradient-shift 3s linear infinite;
+    }
+
+    @keyframes pmc-gradient-shift {
+        to {
+            background-position: 200% center;
+        }
+    }
+
+    /* Pulse Animation */
+    .pmc-pulse {
+        animation: pmc-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+
+    @keyframes pmc-pulse {
+        0%, 100% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0.5;
+        }
+    }
+
+    /* Float Animation */
+    .pmc-float {
+        animation: pmc-float 6s ease-in-out infinite;
+    }
+
+    @keyframes pmc-float {
+        0%, 100% {
+            transform: translateY(0px);
+        }
+        50% {
+            transform: translateY(-20px);
+        }
+    }
+
+    /* Slide In from Bottom */
+    .pmc-slide-up {
+        animation: pmc-slide-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        opacity: 0;
+        transform: translateY(60px);
+    }
+
+    @keyframes pmc-slide-up {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Stagger Animation Delays */
+    .pmc-delay-100 { animation-delay: 100ms; }
+    .pmc-delay-200 { animation-delay: 200ms; }
+    .pmc-delay-300 { animation-delay: 300ms; }
+    .pmc-delay-400 { animation-delay: 400ms; }
+    .pmc-delay-500 { animation-delay: 500ms; }
+    .pmc-delay-600 { animation-delay: 600ms; }
+
+    /* Parallax Effect */
+    .pmc-parallax {
+        will-change: transform;
+    }
+
+    /* Loading Skeleton */
+    .pmc-skeleton {
+        @apply animate-pulse bg-white/5 rounded;
+    }
+
+    /* Glow Effect */
+    .pmc-glow {
+        box-shadow: 0 0 20px rgba(13, 148, 136, 0.3);
+    }
+
+    .pmc-glow-strong {
+        box-shadow: 0 0 40px rgba(13, 148, 136, 0.5);
+    }
+}
