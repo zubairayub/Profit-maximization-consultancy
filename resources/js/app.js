@@ -6,6 +6,52 @@ import Chart from 'chart.js/auto';
 window.Alpine = Alpine;
 window.Chart = Chart;
 
+// Theme Management
+(function() {
+    // Get theme from localStorage or default to 'dark'
+    const getTheme = () => {
+        const stored = localStorage.getItem('pmc-theme');
+        if (stored) return stored;
+        // Check system preference
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            return 'dark';
+        }
+        return 'dark'; // Default to dark
+    };
+
+    // Apply theme
+    const applyTheme = (theme) => {
+        const root = document.documentElement;
+        if (theme === 'dark') {
+            root.classList.add('dark');
+        } else {
+            root.classList.remove('dark');
+        }
+        localStorage.setItem('pmc-theme', theme);
+    };
+
+    // Initialize theme on page load
+    applyTheme(getTheme());
+
+    // Expose theme toggle function globally
+    window.pmcToggleTheme = () => {
+        const currentTheme = getTheme();
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        applyTheme(newTheme);
+        return newTheme;
+    };
+
+    // Listen for system theme changes
+    if (window.matchMedia) {
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+            // Only auto-switch if user hasn't set a preference
+            if (!localStorage.getItem('pmc-theme')) {
+                applyTheme(e.matches ? 'dark' : 'light');
+            }
+        });
+    }
+})();
+
 // Scroll Animation Observer
 document.addEventListener('DOMContentLoaded', () => {
     // Intersection Observer for scroll animations
@@ -113,6 +159,27 @@ document.addEventListener('alpine:init', () => {
                 this.x = e.clientX;
                 this.y = e.clientY;
             });
+        }
+    }));
+
+    // Theme toggle
+    Alpine.data('pmcTheme', () => ({
+        theme: document.documentElement.classList.contains('dark') ? 'dark' : 'light',
+        init() {
+            // Sync with current theme
+            this.theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+            
+            // Watch for theme changes
+            const observer = new MutationObserver(() => {
+                this.theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+            });
+            observer.observe(document.documentElement, {
+                attributes: true,
+                attributeFilter: ['class']
+            });
+        },
+        toggle() {
+            this.theme = window.pmcToggleTheme();
         }
     }));
 });

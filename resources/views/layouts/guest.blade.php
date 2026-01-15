@@ -18,7 +18,7 @@
         <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100 dark:bg-gray-900">
             <div>
                 <a href="/">
-                    <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
+                    <img src="{{ asset('storage/logot.png') }}" alt="Profit Maximization Consultancy Logo" class="h-32 w-auto object-contain sm:h-40" />
                 </a>
             </div>
 

@@ -9,19 +9,19 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-6">
             <!-- Key Metrics Cards -->
             <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-                <div class="bg-gradient-to-br from-pmc-navy to-pmc-teal rounded-lg p-6 text-white">
+                <div class="bg-gradient-to-br from-pmc-navy to-pmc-blue rounded-lg p-6 text-white">
                     <div class="text-sm opacity-80">Total Submissions</div>
                     <div class="text-3xl font-bold mt-1">{{ number_format($totalSubmissions) }}</div>
                 </div>
-                <div class="bg-gradient-to-br from-pmc-teal to-pmc-emerald rounded-lg p-6 text-white">
+                <div class="bg-gradient-to-br from-pmc-blue to-blue-600 rounded-lg p-6 text-white">
                     <div class="text-sm opacity-80">Active Clients</div>
                     <div class="text-3xl font-bold mt-1">{{ number_format($activeClients) }}</div>
                 </div>
-                <div class="bg-gradient-to-br from-pmc-emerald to-pmc-teal rounded-lg p-6 text-white">
+                <div class="bg-gradient-to-br from-blue-600 to-pmc-blue rounded-lg p-6 text-white">
                     <div class="text-sm opacity-80">Total Revenue</div>
                     <div class="text-3xl font-bold mt-1">${{ number_format($totalRevenue, 0) }}</div>
                 </div>
-                <div class="bg-gradient-to-br from-pmc-navy to-pmc-emerald rounded-lg p-6 text-white">
+                <div class="bg-gradient-to-br from-pmc-navy to-blue-600 rounded-lg p-6 text-white">
                     <div class="text-sm opacity-80">Conversion Rate</div>
                     <div class="text-3xl font-bold mt-1">{{ $conversionRate }}%</div>
                 </div>
@@ -69,7 +69,7 @@
                                     <span class="capitalize">{{ str_replace('_', ' ', $package) }}</span>
                                     <div class="flex items-center gap-2">
                                         <div class="w-32 bg-gray-200 rounded-full h-2">
-                                            <div class="bg-pmc-teal h-2 rounded-full" style="width: {{ $totalSubmissions > 0 ? ($count / $totalSubmissions) * 100 : 0 }}%"></div>
+                                            <div class="bg-pmc-blue h-2 rounded-full" style="width: {{ $totalSubmissions > 0 ? ($count / $totalSubmissions) * 100 : 0 }}%"></div>
                                         </div>
                                         <span class="text-sm font-medium w-8 text-right">{{ $count }}</span>
                                     </div>
@@ -91,7 +91,7 @@
                                     <span>{{ $size }}</span>
                                     <div class="flex items-center gap-2">
                                         <div class="w-32 bg-gray-200 rounded-full h-2">
-                                            <div class="bg-pmc-emerald h-2 rounded-full" style="width: {{ $totalSubmissions > 0 ? ($count / $totalSubmissions) * 100 : 0 }}%"></div>
+                                            <div class="bg-pmc-blue h-2 rounded-full" style="width: {{ $totalSubmissions > 0 ? ($count / $totalSubmissions) * 100 : 0 }}%"></div>
                                         </div>
                                         <span class="text-sm font-medium w-8 text-right">{{ $count }}</span>
                                     </div>
@@ -109,7 +109,7 @@
                 <div class="p-6">
                     <div class="flex justify-between items-center mb-4">
                         <h3 class="text-lg font-semibold">Recent Submissions</h3>
-                        <a href="{{ route('admin.contacts.index') }}" class="text-pmc-teal hover:underline text-sm">View All</a>
+                        <a href="{{ route('admin.contacts.index') }}" class="text-pmc-blue hover:underline text-sm">View All</a>
                     </div>
                     <div class="overflow-x-auto">
                         <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
@@ -166,8 +166,8 @@
                             ['Contact Submissions', 'admin.contacts.index', 'Strategic dialogue inquiries and follow-ups.'],
                             ['Page Content', 'admin.pages.index', 'Edit key page content (WYSIWYG + JSON).'],
                         ] as [$title, $route, $desc])
-                            <div class="rounded-xl border border-gray-200 dark:border-gray-700 p-4 hover:border-pmc-teal transition">
-                                <a class="font-semibold hover:underline text-pmc-teal" href="{{ route($route) }}">{{ $title }}</a>
+                            <div class="rounded-xl border border-gray-200 dark:border-gray-700 p-4 hover:border-pmc-blue transition">
+                                <a class="font-semibold hover:underline text-pmc-blue" href="{{ route($route) }}">{{ $title }}</a>
                                 <div class="mt-1 text-sm text-gray-600 dark:text-gray-300">{{ $desc }}</div>
                             </div>
                         @endforeach

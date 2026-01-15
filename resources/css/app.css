@@ -4,7 +4,7 @@
 
 @layer base {
     :root {
-        color-scheme: dark;
+        color-scheme: light dark;
     }
 
     html {
@@ -19,11 +19,17 @@
 @layer utilities {
     .pmc-grid {
         background-image:
-            linear-gradient(to right, rgba(148, 163, 184, 0.08) 1px, transparent 1px),
-            linear-gradient(to bottom, rgba(148, 163, 184, 0.08) 1px, transparent 1px);
+            linear-gradient(to right, rgba(148, 163, 184, 0.12) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(148, 163, 184, 0.12) 1px, transparent 1px);
         background-size: 48px 48px;
         mask-image: radial-gradient(60% 60% at 50% 35%, rgba(0,0,0,1) 20%, rgba(0,0,0,0) 70%);
         animation: pmc-grid-move 20s linear infinite;
+    }
+
+    .dark .pmc-grid {
+        background-image:
+            linear-gradient(to right, rgba(148, 163, 184, 0.08) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(148, 163, 184, 0.08) 1px, transparent 1px);
     }
 
     @keyframes pmc-grid-move {
@@ -49,7 +55,8 @@
     }
 
     .pmc-fade-in.pmc-visible {
-        opacity: 1;
+        opacity: 1 !important;
+        animation: none;
     }
 
     @keyframes pmc-fade-in {
@@ -69,7 +76,8 @@
     }
 
     .pmc-fade-in-up.pmc-visible {
-        opacity: 1;
+        opacity: 1 !important;
+        animation: none;
     }
 
     @keyframes pmc-fade-in-up {
@@ -109,7 +117,8 @@
     }
 
     .pmc-fade-in-right.pmc-visible {
-        opacity: 1;
+        opacity: 1 !important;
+        animation: none;
     }
 
     @keyframes pmc-fade-in-right {
@@ -152,7 +161,7 @@
 
     .pmc-hover-lift:hover {
         transform: translateY(-8px);
-        box-shadow: 0 20px 40px -12px rgba(13, 148, 136, 0.3);
+        box-shadow: 0 20px 40px -12px rgba(37, 99, 235, 0.3);
     }
 
     .pmc-hover-glow {
@@ -160,7 +169,7 @@
     }
 
     .pmc-hover-glow:hover {
-        box-shadow: 0 0 30px rgba(13, 148, 136, 0.4);
+        box-shadow: 0 0 30px rgba(37, 99, 235, 0.4);
     }
 
     .pmc-hover-scale {
@@ -178,7 +187,7 @@
 
     .pmc-btn-primary::before {
         content: '';
-        @apply absolute inset-0 bg-gradient-to-r from-pmc-teal to-pmc-emerald opacity-0 transition-opacity duration-300;
+        @apply absolute inset-0 bg-gradient-to-r from-pmc-blue to-blue-600 opacity-0 transition-opacity duration-300;
         transform: translateX(-100%);
     }
 
@@ -193,7 +202,7 @@
 
     /* Gradient Text Animation */
     .pmc-gradient-text {
-        @apply bg-gradient-to-r from-pmc-teal via-pmc-emerald to-pmc-teal bg-clip-text text-transparent;
+        @apply bg-gradient-to-r from-pmc-blue via-blue-600 to-pmc-blue bg-clip-text text-transparent;
         background-size: 200% auto;
         animation: pmc-gradient-shift 3s linear infinite;
     }
@@ -266,10 +275,10 @@
 
     /* Glow Effect */
     .pmc-glow {
-        box-shadow: 0 0 20px rgba(13, 148, 136, 0.3);
+        box-shadow: 0 0 20px rgba(37, 99, 235, 0.3);
     }
 
     .pmc-glow-strong {
-        box-shadow: 0 0 40px rgba(13, 148, 136, 0.5);
+        box-shadow: 0 0 40px rgba(37, 99, 235, 0.5);
     }
 }

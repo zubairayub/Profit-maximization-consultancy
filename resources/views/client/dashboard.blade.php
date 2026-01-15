@@ -97,8 +97,8 @@
                                     datasets: [{
                                         label: metricName.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
                                         data: data.values,
-                                        borderColor: '#0d9488',
-                                        backgroundColor: 'rgba(13, 148, 136, 0.1)',
+                                        borderColor: '#2563EB',
+                                        backgroundColor: 'rgba(37, 99, 235, 0.1)',
                                         tension: 0.4,
                                         fill: true,
                                     }]
