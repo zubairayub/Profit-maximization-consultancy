@@ -19,9 +19,9 @@
             <div class="pointer-events-none absolute -bottom-40 right-0 h-[520px] w-[520px] rounded-full bg-gradient-to-tr from-pmc-emerald/4 dark:from-pmc-green/15 via-pmc-teal/4 dark:via-pmc-blue/20 to-transparent blur-3xl"></div>
 
             <header x-data="{ open:false }" class="relative z-10 border-b border-pmc-silver dark:border-pmc-white/20 bg-pmc-cream dark:bg-pmc-navy backdrop-blur shadow-sm dark:shadow-none">
-                <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+                <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8">
                     <a href="{{ route('home') }}" class="group inline-flex items-center">
-                        <img src="{{ asset('storage/logot.png') }}" alt="Profit Maximization Consultancy Logo" class="h-24 w-auto object-contain transition-transform duration-300 group-hover:scale-105 sm:h-32" />
+                        <img src="{{ asset('storage/logot.png') }}" alt="Profit Maximization Consultancy Logo" class="h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105 sm:h-16" />
                     </a>
 
                     <nav class="hidden items-center gap-7 text-sm text-pmc-steel dark:text-pmc-white/80 md:flex">
@@ -29,6 +29,7 @@
                         <a class="hover:text-pmc-charcoal dark:hover:text-pmc-white hover:border-b-2 hover:border-pmc-blue/40 dark:hover:border-pmc-green transition-all font-medium pb-1" href="{{ route('methodology') }}">Methodology</a>
                         <a class="hover:text-pmc-charcoal dark:hover:text-pmc-white hover:border-b-2 hover:border-pmc-blue/40 dark:hover:border-pmc-green transition-all font-medium pb-1" href="{{ route('industries') }}">Industries</a>
                         <a class="hover:text-pmc-charcoal dark:hover:text-pmc-white hover:border-b-2 hover:border-pmc-blue/40 dark:hover:border-pmc-green transition-all font-medium pb-1" href="{{ route('about') }}">Leadership</a>
+                        <a class="hover:text-pmc-charcoal dark:hover:text-pmc-white hover:border-b-2 hover:border-pmc-blue/40 dark:hover:border-pmc-green transition-all font-medium pb-1" href="{{ route('faq') }}">FAQ</a>
                         <a class="hover:text-pmc-charcoal dark:hover:text-pmc-white hover:border-b-2 hover:border-pmc-blue/40 dark:hover:border-pmc-green transition-all font-medium pb-1" href="{{ route('contact') }}">Engagement</a>
                     </nav>
 
@@ -60,6 +61,7 @@
                         <a class="block rounded-lg px-3 py-2 hover:bg-pmc-slate-light dark:hover:bg-pmc-green/20 hover:text-pmc-charcoal dark:hover:text-pmc-white transition-colors font-medium" href="{{ route('methodology') }}">Methodology</a>
                         <a class="block rounded-lg px-3 py-2 hover:bg-pmc-slate-light dark:hover:bg-pmc-green/20 hover:text-pmc-charcoal dark:hover:text-pmc-white transition-colors font-medium" href="{{ route('industries') }}">Industries</a>
                         <a class="block rounded-lg px-3 py-2 hover:bg-pmc-slate-light dark:hover:bg-pmc-green/20 hover:text-pmc-charcoal dark:hover:text-pmc-white transition-colors font-medium" href="{{ route('about') }}">Leadership</a>
+                        <a class="block rounded-lg px-3 py-2 hover:bg-pmc-slate-light dark:hover:bg-pmc-green/20 hover:text-pmc-charcoal dark:hover:text-pmc-white transition-colors font-medium" href="{{ route('faq') }}">FAQ</a>
                         <a class="block rounded-lg px-3 py-2 hover:bg-pmc-slate-light dark:hover:bg-pmc-green/20 hover:text-pmc-charcoal dark:hover:text-pmc-white transition-colors font-medium" href="{{ route('contact') }}">Engagement</a>
                         <div class="mt-3 flex gap-2">
                             @auth
@@ -94,6 +96,7 @@
                         <a class="block hover:text-pmc-charcoal dark:hover:text-pmc-white dark:hover:text-pmc-green transition-colors" href="{{ route('methodology') }}">Methodology</a>
                         <a class="block hover:text-pmc-charcoal dark:hover:text-pmc-white dark:hover:text-pmc-green transition-colors" href="{{ route('industries') }}">Industries</a>
                         <a class="block hover:text-pmc-charcoal dark:hover:text-pmc-white dark:hover:text-pmc-green transition-colors" href="{{ route('about') }}">Leadership</a>
+                        <a class="block hover:text-pmc-charcoal dark:hover:text-pmc-white dark:hover:text-pmc-green transition-colors" href="{{ route('faq') }}">FAQ</a>
                         <a class="block hover:text-pmc-charcoal dark:hover:text-pmc-white dark:hover:text-pmc-green transition-colors" href="{{ route('contact') }}">Contact & Engagement</a>
                     </div>
                     <div class="space-y-2">

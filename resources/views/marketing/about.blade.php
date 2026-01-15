@@ -13,29 +13,51 @@
         <div class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
             <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                 @foreach ([
-                    ['Syed Aamir', 'Chairman & Chief Executive Officer', 'Profit is not a metric. It is an operating system.'],
-                    ['Aleena Kamaal Khan', 'Chief Operation Officer', 'Discipline is the highest form of strategy.'],
-                    ['Engineer Syed Ishaque', 'Regional Director Middle East', 'Board-ready insight must translate into action.'],
-                    ['Engineer Asim Mahmood Shah', 'Regional Director USA', 'Value creation is engineered—measured, governed, delivered.'],
-                    ['Syed Abdullah', 'Director Marketing', 'Positioning is a strategic asset when it is credible.'],
-                ] as $index => [$name, $title, $quote])
-                    @php
-                        $initials = collect(explode(' ', $name))->map(fn ($p) => mb_substr($p, 0, 1))->take(2)->join('');
-                    @endphp
-                    <div class="pmc-card-reveal pmc-hover-lift group rounded-3xl border border-gray-200 dark:border-white/10 bg-gradient-to-b from-gray-50 dark:from-white/10 to-transparent p-1 transition-all hover:border-pmc-blue/30" style="animation-delay: {{ ($index + 1) * 150 }}ms">
+                    [
+                        'name' => 'Syed Aamir',
+                        'title' => 'Chairman & Chief Executive Officer',
+                        'qualifications' => 'Chartered Management Accountant – England & Wales FCMA (UK) | CFA (Canada) | MBA (USA) | MFBA (UK) | FCMA (Pakistan) | LLB | M.A. (Economics)',
+                        'image' => asset('storage/team1.jpeg'),
+                    ],
+                    [
+                        'name' => 'Aleena Kamal Khan',
+                        'title' => 'Chartered Accountant',
+                        'qualifications' => 'Chartered Accountant (CA) – Pakistan | Chartered Accountant – Institute of Chartered Accountants in England and Wales (UK) | Associate Chartered Accountant (ACA) | Fellow Chartered Accountant (FCA)',
+                        'image' => asset('storage/team1.jpeg'),
+                    ],
+                    [
+                        'name' => 'Engineer Syed Ishaque',
+                        'title' => 'Regional Director Middle East',
+                        'qualifications' => 'Civil Engineer | More than 3 decades of experience in international market',
+                        'image' => asset('storage/team1.jpeg'),
+                    ],
+                    [
+                        'name' => 'Engineer Asim Mahmood Shah',
+                        'title' => 'Regional Director USA',
+                        'qualifications' => 'Mechanical Engineer from Michigan State University | More than 3 decades of experience in US market',
+                        'image' => asset('storage/team1.jpeg'),
+                    ],
+                    [
+                        'name' => 'Syed Abdullah',
+                        'title' => 'Director Marketing',
+                        'qualifications' => 'MBA from International University',
+                        'image' => asset('storage/team1.jpeg'),
+                    ],
+                ] as $index => $member)
+                    <div class="pmc-card-reveal pmc-hover-lift group rounded-3xl border border-gray-200 dark:border-white/10 bg-gradient-to-b from-gray-50 dark:from-white/10 to-transparent p-1 transition-all hover:border-pmc-blue/30 dark:hover:border-pmc-green/50" style="animation-delay: {{ ($index + 1) * 150 }}ms">
                         <div class="h-full rounded-[22px] bg-white dark:bg-white/5 p-7">
-                            <div class="flex items-center gap-4">
-                                <div class="pmc-hover-scale pmc-glow grid h-14 w-14 place-items-center rounded-2xl bg-gradient-to-br from-pmc-blue to-blue-600 text-lg font-semibold text-white dark:text-pmc-navy transition-all hover:scale-110">
-                                    {{ $initials }}
+                            <div class="flex flex-col items-center text-center">
+                                <div class="pmc-hover-scale pmc-glow overflow-hidden rounded-2xl bg-gradient-to-br from-pmc-blue to-blue-600 dark:from-pmc-green dark:to-pmc-green/80 h-24 w-24 transition-all hover:scale-110 mb-4">
+                                    <img src="{{ $member['image'] }}" alt="{{ $member['name'] }}" class="h-full w-full object-cover">
                                 </div>
-                                <div>
-                                    <div class="text-gray-900 dark:text-white font-semibold">{{ $name }}</div>
-                                    <div class="text-sm text-gray-600 dark:text-slate-300">{{ $title }}</div>
+                                <div class="w-full">
+                                    <div class="text-gray-900 dark:text-white font-semibold text-lg">{{ $member['name'] }}</div>
+                                    <div class="text-sm text-gray-600 dark:text-slate-300 mt-1 font-medium">{{ $member['title'] }}</div>
                                 </div>
                             </div>
-                            <div class="mt-6 rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-black/10 p-5 text-sm text-gray-700 dark:text-slate-200 opacity-90 transition-all group-hover:opacity-100 group-hover:border-pmc-blue/30">
-                                <div class="text-xs font-semibold text-gray-900 dark:text-white">Philosophy on Profit Maximization</div>
-                                <div class="mt-2">"{{ $quote }}"</div>
+                            <div class="mt-6 rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-black/10 p-5 text-sm text-gray-700 dark:text-slate-200 opacity-90 transition-all group-hover:opacity-100 group-hover:border-pmc-blue/30 dark:group-hover:border-pmc-green/50">
+                                <div class="text-xs font-semibold text-gray-900 dark:text-white mb-2">Qualifications & Experience</div>
+                                <div class="text-xs leading-relaxed">{{ $member['qualifications'] }}</div>
                             </div>
                         </div>
                     </div>

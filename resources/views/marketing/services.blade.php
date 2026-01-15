@@ -11,97 +11,55 @@
 
     <section class="border-b border-pmc-silver/80 dark:border-white/10 bg-gradient-to-b from-white via-pmc-slate-light/50 to-white dark:from-transparent dark:via-transparent dark:to-transparent">
         <div class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
-            <div class="grid gap-6 lg:grid-cols-3">
-                @foreach ([
-                    [
-                        'tier' => 'Silver',
-                        'range' => '$7,500 – $12,000 / month',
-                        'bestFor' => 'Companies needing better control, reporting, cost visibility',
-                        'roi' => 'Identifies 2–5% profit leakage in first 60 days',
-                        'services' => [
-                            'Financial Health Check (One-time)',
-                            'Review of Financial Statements & MIS',
-                            'Cost Structure Analysis',
-                            'Budget vs Actual Variance Analysis',
-                            'Cash Flow & Working Capital Review',
-                            'Basic Tax & Compliance Review',
-                            'Monthly Management Report (Executive Summary)',
+            <div class="flex justify-center">
+                <div class="w-full max-w-2xl">
+                    @foreach ([
+                        [
+                            'tier' => 'Gold',
+                            'range' => '$1,000,000 / year',
+                            'bestFor' => 'Global 500, Fortune & Top-1000 organizations seeking cost reduction, profit recovery & turnaround consulting',
+                            'roi' => 'Enterprise-wide cost reduction, profit recovery, EBITDA improvement, and turnaround advisory',
+                            'services' => [
+                                'Enterprise-wide cost diagnostics and profit leakage identification',
+                                'Cost reduction and cost transformation strategies',
+                                'Turnaround and restructuring advisory',
+                                'Profit recovery and EBITDA improvement initiatives',
+                                'Working capital and cash flow optimization',
+                                'Financial and management performance analysis',
+                                'Strategic cost management and value-chain analysis',
+                                'KPI design, performance monitoring, and reporting',
+                                'CFO-level strategic and financial advisory support',
+                                'Value Chain Analysis & Cost Driver Analysis',
+                                'Activity-Based Costing (ABC)',
+                                'Contribution and margin analysis',
+                                'Internal controls & governance strengthening',
+                                'ERP and finance function optimization',
+                            ],
+                            'outcome' => [
+                                'Elimination of profit leakage from operational, financial, commercial, and manufacturing inefficiencies',
+                                'Intelligent cost reduction and structural inefficiency elimination',
+                                'Cash-flow and working capital recovery',
+                                'Turnaround and realignment strategies',
+                                'Sustainable EBITDA improvement',
+                                'Long-term financial sustainability',
+                            ],
+                            'justified' => [
+                                'Retainer-based and performance-oriented consultancy aligned with financial impact',
+                                'Independent advisor working closely with Boards, CEOs, and CFOs',
+                                'Enterprise-wide cost and value focus',
+                                'Proven cost management frameworks',
+                                'Performance-linked, results-oriented approach',
+                                'Payment: 50% advance (USD 500,000) + 50% quarterly/milestone-based',
+                            ],
+                            'successFee' => true,
                         ],
-                        'outcome' => [
-                            'Improved financial transparency',
-                            'Identification of cost leakages',
-                            'Better decision-making data',
-                        ],
-                        'justified' => [
-                            'Structured executive reporting and control loops',
-                            'Rapid leakage identification and remediation plan',
-                            'Decision-ready visibility, not raw data',
-                        ],
-                        'successFee' => false,
-                    ],
-                    [
-                        'tier' => 'Gold',
-                        'range' => '$18,000 – $30,000 / month',
-                        'bestFor' => 'Growth-focused companies aiming to improve margins',
-                        'roi' => '5–10% EBITDA improvement, pays back within 90 days',
-                        'services' => [
-                            'Includes Silver Package +',
-                            'Detailed Profitability Analysis (Product/Customer/Department-wise)',
-                            'Pricing & Margin Optimization',
-                            'Cost Reduction & Process Efficiency Audit',
-                            'Budgeting & Forecasting Model',
-                            'Internal Controls & SOP Review',
-                            'Tax Optimization Strategies',
-                            'Quarterly Board-Level Performance Report',
-                            'KPI Design & Monitoring Dashboard',
-                        ],
-                        'outcome' => [
-                            'Margin improvement',
-                            'Reduced operational inefficiencies',
-                            'Structured financial discipline',
-                        ],
-                        'justified' => [
-                            'Profitability segmentation and pricing leverage',
-                            'Board-level cadence and KPI governance',
-                            'Alignment through success-based fees',
-                        ],
-                        'successFee' => true,
-                    ],
-                    [
-                        'tier' => 'Platinum',
-                        'range' => '$40,000 – $75,000 / month',
-                        'bestFor' => 'Large corporations, groups & listed companies',
-                        'roi' => 'Enterprise-level governance & strategic finance leadership',
-                        'services' => [
-                            'Includes Gold Package +',
-                            'Virtual / Fractional CFO Services',
-                            'Strategic Financial Planning & Modeling',
-                            'ERP / SAP Finance Optimization',
-                            'Business Process Re-Engineering (BPR)',
-                            'Risk Management & Internal Audit Oversight',
-                            'Expansion, Restructuring & Turnaround Advisory',
-                            'M&A / Due Diligence Financial Support',
-                            'Monthly Board Presentations & Strategy Reviews',
-                        ],
-                        'outcome' => [
-                            'Sustainable profit growth',
-                            'Strategic financial leadership',
-                            'Enterprise-level governance & control',
-                        ],
-                        'justified' => [
-                            'Comparable market: below McKinsey/BCG, above Big-4 advisory retainers',
-                            'CFO-grade operating model and execution governance',
-                            'Alignment through success-based fees',
-                        ],
-                        'successFee' => true,
-                    ],
-                ] as $index => $pkg)
-                    <div class="pmc-card-reveal pmc-hover-lift rounded-3xl border border-gray-200 dark:border-white/10 bg-gradient-to-b from-gray-50 dark:from-white/10 to-transparent p-1 transition-all hover:border-pmc-blue/30" style="animation-delay: {{ ($index + 1) * 150 }}ms">
+                    ] as $index => $pkg)
+                    <div class="pmc-card-reveal pmc-hover-lift rounded-3xl border border-gray-200 dark:border-white/10 bg-gradient-to-b from-gray-50 dark:from-white/10 to-transparent p-1 transition-all hover:border-pmc-blue/30">
                         <div x-data="{ tab: 'services' }" class="rounded-[22px] bg-white dark:bg-white/5 p-7">
                             <div class="flex items-center justify-between">
                                 <div class="text-sm font-semibold text-gray-900 dark:text-white">{{ $pkg['tier'] }} Package</div>
                                 @if ($pkg['successFee'])
-                                    <div class="pmc-pulse rounded-full bg-pmc-blue/15 px-3 py-1 text-xs font-semibold text-pmc-blue">Success-Based Fees</div>
+                                    <div class="pmc-pulse rounded-full bg-pmc-green/20 dark:bg-pmc-green/30 px-3 py-1 text-xs font-semibold text-pmc-green dark:text-pmc-green">Retainer-Based & Performance-Oriented</div>
                                 @endif
                             </div>
 
@@ -168,35 +126,7 @@
                         </div>
                     </div>
                 @endforeach
-            </div>
-        </div>
-    </section>
-
-    <section class="border-b border-pmc-silver/80 dark:border-white/10 bg-gradient-to-b from-pmc-blue-tint/30 via-white to-pmc-slate-light dark:from-black/10 dark:via-black/10 dark:to-black/10">
-        <div class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
-            <h2 class="pmc-fade-in-left text-2xl font-semibold text-pmc-charcoal dark:text-white">High-value project pricing (USD)</h2>
-            <p class="pmc-fade-in-left pmc-delay-100 mt-2 text-gray-700 dark:text-slate-200">Discrete strategic projects for enterprise profit impact.</p>
-
-            <div class="pmc-fade-in-up pmc-delay-200 mt-8 overflow-hidden rounded-3xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5">
-                <div class="grid grid-cols-1 divide-y divide-gray-200 dark:divide-white/10">
-                    @foreach ([
-                        ['Enterprise Profit Diagnostic', '$25,000 – $50,000'],
-                        ['Cost Transformation Program', '$50,000 – $150,000'],
-                        ['SAP / ERP Optimization', '$75,000 – $250,000'],
-                        ['Financial Due Diligence', '$60,000 – $200,000'],
-                        ['Turnaround Advisory', '$100,000 – $500,000'],
-                        ['Business Valuation (Group)', '$50,000 – $150,000'],
-                    ] as $index => [$name, $range])
-                        <div class="pmc-card-reveal pmc-hover-glow flex flex-col gap-2 p-5 transition-all hover:bg-gray-50 dark:hover:bg-white/5 sm:flex-row sm:items-center sm:justify-between" style="animation-delay: {{ ($index + 1) * 100 }}ms">
-                            <div class="font-medium text-gray-900 dark:text-white">{{ $name }}</div>
-                            <div class="text-gray-700 dark:text-slate-200 pmc-gradient-text">{{ $range }}</div>
-                        </div>
-                    @endforeach
                 </div>
-            </div>
-
-            <div class="mt-4 text-xs text-gray-500 dark:text-slate-400">
-                Fees are based on strategic value creation, not time spent. Success fee may apply.
             </div>
         </div>
     </section>

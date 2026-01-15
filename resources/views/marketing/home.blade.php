@@ -133,31 +133,18 @@
                 </a>
             </div>
 
-            <div class="mt-10 grid gap-6 lg:grid-cols-3">
-                @foreach ([
-                    [
-                        'name' => 'Silver',
-                        'price' => '$7,500 – $12,000 / month',
-                        'bestFor' => 'Companies needing better control, reporting, cost visibility',
-                        'roi' => 'Identifies 2–5% profit leakage in first 60 days',
-                        'badge' => null,
-                    ],
-                    [
-                        'name' => 'Gold',
-                        'price' => '$18,000 – $30,000 / month',
-                        'bestFor' => 'Growth-focused companies aiming to improve margins',
-                        'roi' => '5–10% EBITDA improvement, pays back within 90 days',
-                        'badge' => 'Success-Based Fees',
-                    ],
-                    [
-                        'name' => 'Platinum',
-                        'price' => '$40,000 – $75,000 / month',
-                        'bestFor' => 'Large corporations, groups & listed companies',
-                        'roi' => 'Enterprise governance + board-level cadence',
-                        'badge' => 'Success-Based Fees',
-                    ],
-                ] as $index => $p)
-                    <div class="pmc-card-reveal pmc-hover-lift group relative rounded-3xl border border-pmc-silver dark:border-pmc-green/30 bg-gradient-to-b from-white dark:from-pmc-white/10 to-transparent p-1 transition-all hover:border-pmc-blue/30 dark:hover:border-pmc-green/50 shadow-lg hover:shadow-xl" style="animation-delay: {{ ($index + 1) * 150 }}ms">
+            <div class="mt-10 flex justify-center">
+                <div class="w-full max-w-2xl">
+                    @foreach ([
+                        [
+                            'name' => 'Gold',
+                            'price' => '$1,000,000 / year',
+                            'bestFor' => 'Global 500, Fortune & Top-1000 organizations seeking cost reduction, profit recovery & turnaround consulting',
+                            'roi' => 'Enterprise-wide cost reduction, profit recovery, EBITDA improvement, and turnaround advisory',
+                            'badge' => 'Retainer-Based & Performance-Oriented',
+                        ],
+                    ] as $index => $p)
+                    <div class="pmc-card-reveal pmc-hover-lift group relative rounded-3xl border border-pmc-silver dark:border-pmc-green/30 bg-gradient-to-b from-white dark:from-pmc-white/10 to-transparent p-1 transition-all hover:border-pmc-blue/30 dark:hover:border-pmc-green/50 shadow-lg hover:shadow-xl">
                         <div class="rounded-[22px] bg-white dark:bg-pmc-white/10 p-7">
                             <div class="flex items-center justify-between">
                                 <div class="text-sm font-semibold text-pmc-charcoal dark:text-pmc-white">{{ $p['name'] }} Package</div>
@@ -191,7 +178,8 @@
                             </div>
                         </div>
                     </div>
-                @endforeach
+                    @endforeach
+                </div>
             </div>
         </div>
     </section>

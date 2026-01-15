@@ -18,9 +18,7 @@
                             <label class="text-xs font-semibold text-gray-700 dark:text-slate-200">I'm interested in</label>
                             <select x-model="interest" class="mt-2 w-full rounded-xl border border-gray-200 dark:border-white/10 bg-white dark:bg-pmc-navy/60 text-gray-900 dark:text-slate-100 focus:border-pmc-blue focus:ring-pmc-blue">
                                 <option value="" disabled>Select…</option>
-                                <option>Silver</option>
-                                <option>Gold</option>
-                                <option>Platinum</option>
+                                <option>Gold Package</option>
                                 <option>Project</option>
                             </select>
                         </div>
