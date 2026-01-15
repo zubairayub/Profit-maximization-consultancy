@@ -17,31 +17,31 @@
                         'name' => 'Syed Aamir',
                         'title' => 'Chairman & Chief Executive Officer',
                         'qualifications' => 'Chartered Management Accountant – England & Wales FCMA (UK) | CFA (Canada) | MBA (USA) | MFBA (UK) | FCMA (Pakistan) | LLB | M.A. (Economics)',
-                        'image' => asset('storage/team1.jpeg'),
+                        'image' => asset('storage/app/public/team1.jpeg'),
                     ],
                     [
                         'name' => 'Aleena Kamal Khan',
                         'title' => 'Chartered Accountant',
                         'qualifications' => 'Chartered Accountant (CA) – Pakistan | Chartered Accountant – Institute of Chartered Accountants in England and Wales (UK) | Associate Chartered Accountant (ACA) | Fellow Chartered Accountant (FCA)',
-                        'image' => asset('storage/team1.jpeg'),
+                        'image' => asset('storage/app/public/team1.jpeg'),
                     ],
                     [
                         'name' => 'Engineer Syed Ishaque',
                         'title' => 'Regional Director Middle East',
                         'qualifications' => 'Civil Engineer | More than 3 decades of experience in international market',
-                        'image' => asset('storage/team1.jpeg'),
+                        'image' => asset('storage/app/public/team1.jpeg'),
                     ],
                     [
                         'name' => 'Engineer Asim Mahmood Shah',
                         'title' => 'Regional Director USA',
                         'qualifications' => 'Mechanical Engineer from Michigan State University | More than 3 decades of experience in US market',
-                        'image' => asset('storage/team1.jpeg'),
+                        'image' => asset('storage/app/public/team1.jpeg'),
                     ],
                     [
                         'name' => 'Syed Abdullah',
                         'title' => 'Director Marketing',
                         'qualifications' => 'MBA from International University',
-                        'image' => asset('storage/team1.jpeg'),
+                        'image' => asset('storage/app/public/team1.jpeg'),
                     ],
                 ] as $index => $member)
                     <div class="pmc-card-reveal pmc-hover-lift group rounded-3xl border border-gray-200 dark:border-white/10 bg-gradient-to-b from-gray-50 dark:from-white/10 to-transparent p-1 transition-all hover:border-pmc-blue/30 dark:hover:border-pmc-green/50" style="animation-delay: {{ ($index + 1) * 150 }}ms">

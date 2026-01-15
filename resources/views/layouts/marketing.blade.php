@@ -21,7 +21,7 @@
             <header x-data="{ open:false }" class="relative z-10 border-b border-pmc-silver dark:border-pmc-white/20 bg-pmc-cream dark:bg-pmc-navy backdrop-blur shadow-sm dark:shadow-none">
                 <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8">
                     <a href="{{ route('home') }}" class="group inline-flex items-center">
-                        <img src="{{ asset('storage/logot.png') }}" alt="Profit Maximization Consultancy Logo" class="h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105 sm:h-16" />
+                        <img src="{{ asset('storage/app/public/logot.png') }}" alt="Profit Maximization Consultancy Logo" class="h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105 sm:h-16" />
                     </a>
 
                     <nav class="hidden items-center gap-7 text-sm text-pmc-steel dark:text-pmc-white/80 md:flex">
