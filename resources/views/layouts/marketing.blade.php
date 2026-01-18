@@ -40,9 +40,6 @@
                         @else
                             <a href="{{ route('login') }}" class="rounded-xl border border-pmc-silver dark:border-pmc-white/20 bg-white dark:bg-pmc-white/10 px-4 py-2 text-sm font-medium text-pmc-steel dark:text-pmc-white hover:bg-pmc-slate-light dark:hover:bg-pmc-green/20 hover:border-pmc-blue/30 dark:hover:border-pmc-green/50 transition-all shadow-sm hover:shadow-md">Client Login</a>
                         @endauth
-                        <a href="{{ route('contact') }}" class="rounded-xl bg-gradient-to-r from-pmc-blue to-blue-600 dark:from-pmc-green dark:to-pmc-green/80 px-4 py-2 text-sm font-semibold text-white dark:text-pmc-navy shadow-lg hover:shadow-xl hover:opacity-95 transition-all">
-                            Schedule a Strategic Dialogue
-                        </a>
                     </div>
 
                     <div class="flex items-center gap-2 md:hidden">
@@ -69,7 +66,6 @@
                             @else
                                 <a href="{{ route('login') }}" class="flex-1 rounded-xl border border-pmc-silver dark:border-pmc-white/20 bg-white dark:bg-pmc-white/10 px-4 py-2 text-center font-medium text-pmc-steel dark:text-pmc-white hover:bg-pmc-slate-light dark:hover:bg-pmc-green/20 transition-colors shadow-sm">Client Login</a>
                             @endauth
-                            <a href="{{ route('contact') }}" class="flex-1 rounded-xl bg-gradient-to-r from-pmc-teal to-pmc-emerald dark:from-pmc-green dark:to-pmc-green/80 px-4 py-2 text-center font-semibold text-white dark:text-pmc-navy shadow-lg hover:shadow-xl hover:opacity-95 transition-all">Strategic Dialogue</a>
                         </div>
                     </div>
                 </div>

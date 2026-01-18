@@ -164,12 +164,20 @@
         box-shadow: 0 20px 40px -12px rgba(37, 99, 235, 0.3);
     }
 
+    .dark .pmc-hover-lift:hover {
+        box-shadow: 0 20px 40px -12px rgba(16, 185, 129, 0.3);
+    }
+
     .pmc-hover-glow {
         @apply transition-all duration-300;
     }
 
     .pmc-hover-glow:hover {
         box-shadow: 0 0 30px rgba(37, 99, 235, 0.4);
+    }
+
+    .dark .pmc-hover-glow:hover {
+        box-shadow: 0 0 30px rgba(16, 185, 129, 0.4);
     }
 
     .pmc-hover-scale {
@@ -278,7 +286,15 @@
         box-shadow: 0 0 20px rgba(37, 99, 235, 0.3);
     }
 
+    .dark .pmc-glow {
+        box-shadow: 0 0 20px rgba(16, 185, 129, 0.3);
+    }
+
     .pmc-glow-strong {
         box-shadow: 0 0 40px rgba(37, 99, 235, 0.5);
+    }
+
+    .dark .pmc-glow-strong {
+        box-shadow: 0 0 40px rgba(16, 185, 129, 0.5);
     }
 }

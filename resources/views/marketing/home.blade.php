@@ -17,16 +17,7 @@
                         We operate as strategic advisors to CEOs, CFOs, and boards—aligning governance, performance, and execution to unlock measurable profit impact.
                     </p>
 
-                    <div class="pmc-fade-in-up pmc-delay-300 mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
-                        <a href="{{ route('contact') }}" class="pmc-btn-primary pmc-hover-lift inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-pmc-blue to-blue-600 dark:from-pmc-green dark:to-pmc-green/80 px-5 py-3 text-sm font-semibold text-white dark:text-pmc-navy shadow-lg hover:shadow-xl hover:scale-105">
-                            <span>Schedule a Strategic Dialogue</span>
-                        </a>
-                        <a href="{{ route('services') }}" class="pmc-hover-lift inline-flex items-center justify-center rounded-xl border border-pmc-silver dark:border-pmc-white/20 bg-white dark:bg-pmc-white/10 px-5 py-3 text-sm font-medium text-pmc-steel dark:text-pmc-white transition-all hover:bg-pmc-slate-light dark:hover:bg-pmc-green/20 hover:border-pmc-blue/30 dark:hover:border-pmc-green/50 shadow-sm">
-                            Explore Packages
-                        </a>
-                    </div>
-
-                    <div class="pmc-fade-in-up pmc-delay-400 mt-10 rounded-2xl border border-pmc-silver dark:border-pmc-green/30 bg-white dark:bg-pmc-white/10 p-6 text-sm text-pmc-steel dark:text-pmc-white/90 pmc-hover-glow shadow-sm">
+                    <div class="pmc-fade-in-up pmc-delay-300 mt-10 rounded-2xl border border-pmc-silver dark:border-pmc-green/30 bg-white dark:bg-pmc-white/10 p-6 text-sm text-pmc-steel dark:text-pmc-white/90 pmc-hover-glow shadow-sm">
                         <div class="text-pmc-charcoal dark:text-pmc-white font-semibold">Limited engagements. Non-negotiable ROI discipline.</div>
                         <div class="mt-2">
                             "We work with a limited number of clients. If we don't see at least a 5–10x return on our fees, we usually don't take the engagement."

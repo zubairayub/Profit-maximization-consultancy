@@ -15,11 +15,11 @@ export default {
         extend: {
             colors: {
                 pmc: {
-                    navy: '#0D0348',           // Dark mode blue (changed from #0A1628)
-                    teal: '#2563EB',           // Light mode blue
-                    emerald: '#0DC06C',        // Green for dark mode accents
+                    navy: '#0f172a',           // Dark mode default (slate-900)
+                    teal: '#0d9488',           // Dark mode teal (teal-600)
+                    emerald: '#10b981',        // Dark mode emerald (emerald-500)
                     blue: '#2563EB',           // Light mode blue
-                    green: '#0DC06C',          // Green for dark mode
+                    green: '#10b981',          // Dark mode green (emerald-500)
                     white: '#F6F6F6',          // White for dark mode
                     // Elite light mode colors
                     'cream': '#FAFAF9',        // Premium off-white background
