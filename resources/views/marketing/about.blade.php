@@ -17,39 +17,31 @@
                         'name' => 'Syed Aamir',
                         'title' => 'Chairman & Chief Executive Officer',
                         'qualifications' => 'Chartered Management Accountant – England & Wales FCMA (UK) | CFA (Canada) | MBA (USA) | MFBA (UK) | FCMA (Pakistan) | LLB | M.A. (Economics)',
-                        'image' => asset('storage/app/public/team1.jpeg'),
                     ],
                     [
                         'name' => 'Aleena Kamal Khan',
                         'title' => 'Chartered Accountant',
                         'qualifications' => 'Chartered Accountant (CA) – Pakistan | Chartered Accountant – Institute of Chartered Accountants in England and Wales (UK) | Associate Chartered Accountant (ACA) | Fellow Chartered Accountant (FCA)',
-                        'image' => asset('storage/app/public/team1.jpeg'),
                     ],
                     [
                         'name' => 'Engineer Syed Ishaque',
                         'title' => 'Regional Director Middle East',
                         'qualifications' => 'Civil Engineer | More than 3 decades of experience in international market',
-                        'image' => asset('storage/app/public/team1.jpeg'),
                     ],
                     [
                         'name' => 'Engineer Asim Mahmood Shah',
                         'title' => 'Regional Director USA',
                         'qualifications' => 'Mechanical Engineer from Michigan State University | More than 3 decades of experience in US market',
-                        'image' => asset('storage/app/public/team1.jpeg'),
                     ],
                     [
                         'name' => 'Syed Abdullah',
                         'title' => 'Director Marketing',
                         'qualifications' => 'MBA from International University',
-                        'image' => asset('storage/app/public/team1.jpeg'),
                     ],
                 ] as $index => $member)
                     <div class="pmc-card-reveal pmc-hover-lift group rounded-3xl border border-gray-200 dark:border-white/10 bg-gradient-to-b from-gray-50 dark:from-white/10 to-transparent p-1 transition-all hover:border-pmc-blue/30 dark:hover:border-pmc-green/50" style="animation-delay: {{ ($index + 1) * 150 }}ms">
                         <div class="h-full rounded-[22px] bg-white dark:bg-white/5 p-7">
                             <div class="flex flex-col items-center text-center">
-                                <div class="pmc-hover-scale pmc-glow overflow-hidden rounded-2xl bg-gradient-to-br from-pmc-blue to-blue-600 dark:from-pmc-green dark:to-pmc-green/80 h-24 w-24 transition-all hover:scale-110 mb-4">
-                                    <img src="{{ $member['image'] }}" alt="{{ $member['name'] }}" class="h-full w-full object-cover">
-                                </div>
                                 <div class="w-full">
                                     <div class="text-gray-900 dark:text-white font-semibold text-lg">{{ $member['name'] }}</div>
                                     <div class="text-sm text-gray-600 dark:text-slate-300 mt-1 font-medium">{{ $member['title'] }}</div>

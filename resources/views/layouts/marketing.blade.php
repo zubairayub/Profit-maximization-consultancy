@@ -29,6 +29,7 @@
                         <a class="hover:text-pmc-charcoal dark:hover:text-pmc-white hover:border-b-2 hover:border-pmc-blue/40 dark:hover:border-pmc-green transition-all font-medium pb-1" href="{{ route('methodology') }}">Methodology</a>
                         <a class="hover:text-pmc-charcoal dark:hover:text-pmc-white hover:border-b-2 hover:border-pmc-blue/40 dark:hover:border-pmc-green transition-all font-medium pb-1" href="{{ route('industries') }}">Industries</a>
                         <a class="hover:text-pmc-charcoal dark:hover:text-pmc-white hover:border-b-2 hover:border-pmc-blue/40 dark:hover:border-pmc-green transition-all font-medium pb-1" href="{{ route('about') }}">Leadership</a>
+                        <a class="hover:text-pmc-charcoal dark:hover:text-pmc-white hover:border-b-2 hover:border-pmc-blue/40 dark:hover:border-pmc-green transition-all font-medium pb-1" href="{{ route('about-us') }}">About Us</a>
                         <a class="hover:text-pmc-charcoal dark:hover:text-pmc-white hover:border-b-2 hover:border-pmc-blue/40 dark:hover:border-pmc-green transition-all font-medium pb-1" href="{{ route('faq') }}">FAQ</a>
                         <a class="hover:text-pmc-charcoal dark:hover:text-pmc-white hover:border-b-2 hover:border-pmc-blue/40 dark:hover:border-pmc-green transition-all font-medium pb-1" href="{{ route('contact') }}">Engagement</a>
                     </nav>
@@ -37,8 +38,6 @@
                         <x-theme-toggle />
                         @auth
                             <a href="{{ route('dashboard') }}" class="rounded-xl border border-pmc-silver dark:border-pmc-white/20 bg-white dark:bg-pmc-white/10 px-4 py-2 text-sm font-medium text-pmc-steel dark:text-pmc-white hover:bg-pmc-slate-light dark:hover:bg-pmc-green/20 hover:border-pmc-blue/30 dark:hover:border-pmc-green/50 transition-all shadow-sm hover:shadow-md">Dashboard</a>
-                        @else
-                            <a href="{{ route('login') }}" class="rounded-xl border border-pmc-silver dark:border-pmc-white/20 bg-white dark:bg-pmc-white/10 px-4 py-2 text-sm font-medium text-pmc-steel dark:text-pmc-white hover:bg-pmc-slate-light dark:hover:bg-pmc-green/20 hover:border-pmc-blue/30 dark:hover:border-pmc-green/50 transition-all shadow-sm hover:shadow-md">Client Login</a>
                         @endauth
                     </div>
 
@@ -58,13 +57,12 @@
                         <a class="block rounded-lg px-3 py-2 hover:bg-pmc-slate-light dark:hover:bg-pmc-green/20 hover:text-pmc-charcoal dark:hover:text-pmc-white transition-colors font-medium" href="{{ route('methodology') }}">Methodology</a>
                         <a class="block rounded-lg px-3 py-2 hover:bg-pmc-slate-light dark:hover:bg-pmc-green/20 hover:text-pmc-charcoal dark:hover:text-pmc-white transition-colors font-medium" href="{{ route('industries') }}">Industries</a>
                         <a class="block rounded-lg px-3 py-2 hover:bg-pmc-slate-light dark:hover:bg-pmc-green/20 hover:text-pmc-charcoal dark:hover:text-pmc-white transition-colors font-medium" href="{{ route('about') }}">Leadership</a>
+                        <a class="block rounded-lg px-3 py-2 hover:bg-pmc-slate-light dark:hover:bg-pmc-green/20 hover:text-pmc-charcoal dark:hover:text-pmc-white transition-colors font-medium" href="{{ route('about-us') }}">About Us</a>
                         <a class="block rounded-lg px-3 py-2 hover:bg-pmc-slate-light dark:hover:bg-pmc-green/20 hover:text-pmc-charcoal dark:hover:text-pmc-white transition-colors font-medium" href="{{ route('faq') }}">FAQ</a>
                         <a class="block rounded-lg px-3 py-2 hover:bg-pmc-slate-light dark:hover:bg-pmc-green/20 hover:text-pmc-charcoal dark:hover:text-pmc-white transition-colors font-medium" href="{{ route('contact') }}">Engagement</a>
                         <div class="mt-3 flex gap-2">
                             @auth
                                 <a href="{{ route('dashboard') }}" class="flex-1 rounded-xl border border-pmc-silver dark:border-pmc-white/20 bg-white dark:bg-pmc-white/10 px-4 py-2 text-center font-medium text-pmc-steel dark:text-pmc-white hover:bg-pmc-slate-light dark:hover:bg-pmc-green/20 transition-colors shadow-sm">Dashboard</a>
-                            @else
-                                <a href="{{ route('login') }}" class="flex-1 rounded-xl border border-pmc-silver dark:border-pmc-white/20 bg-white dark:bg-pmc-white/10 px-4 py-2 text-center font-medium text-pmc-steel dark:text-pmc-white hover:bg-pmc-slate-light dark:hover:bg-pmc-green/20 transition-colors shadow-sm">Client Login</a>
                             @endauth
                         </div>
                     </div>
@@ -92,6 +90,7 @@
                         <a class="block hover:text-pmc-charcoal dark:hover:text-pmc-white dark:hover:text-pmc-green transition-colors" href="{{ route('methodology') }}">Methodology</a>
                         <a class="block hover:text-pmc-charcoal dark:hover:text-pmc-white dark:hover:text-pmc-green transition-colors" href="{{ route('industries') }}">Industries</a>
                         <a class="block hover:text-pmc-charcoal dark:hover:text-pmc-white dark:hover:text-pmc-green transition-colors" href="{{ route('about') }}">Leadership</a>
+                        <a class="block hover:text-pmc-charcoal dark:hover:text-pmc-white dark:hover:text-pmc-green transition-colors" href="{{ route('about-us') }}">About Us</a>
                         <a class="block hover:text-pmc-charcoal dark:hover:text-pmc-white dark:hover:text-pmc-green transition-colors" href="{{ route('faq') }}">FAQ</a>
                         <a class="block hover:text-pmc-charcoal dark:hover:text-pmc-white dark:hover:text-pmc-green transition-colors" href="{{ route('contact') }}">Contact & Engagement</a>
                     </div>
@@ -99,8 +98,6 @@
                         <div class="text-pmc-charcoal dark:text-pmc-white font-semibold">Secure Access</div>
                         @auth
                             <a class="block hover:text-pmc-charcoal dark:hover:text-pmc-white dark:hover:text-pmc-green transition-colors" href="{{ route('dashboard') }}">Dashboard</a>
-                        @else
-                            <a class="block hover:text-pmc-charcoal dark:hover:text-pmc-white dark:hover:text-pmc-green transition-colors" href="{{ route('login') }}">Client Login</a>
                         @endauth
                         <div class="pt-3 text-xs text-pmc-steel/80 dark:text-pmc-white/60">
                             Confidential by design. Secure portals, controlled access, and board-ready reporting.

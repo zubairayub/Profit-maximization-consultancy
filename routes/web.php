@@ -24,6 +24,7 @@ Route::view('/services', 'marketing.services')->name('services');
 Route::view('/methodology', 'marketing.methodology')->name('methodology');
 Route::view('/industries', 'marketing.industries')->name('industries');
 Route::view('/about', 'marketing.about')->name('about');
+Route::view('/about-us', 'marketing.about-us')->name('about-us');
 Route::view('/faq', 'marketing.faq')->name('faq');
 Route::view('/contact', 'marketing.contact')->name('contact');
 Route::post('/contact', [ContactSubmissionController::class, 'store'])->name('contact.submit');
