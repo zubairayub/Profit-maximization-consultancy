@@ -18,7 +18,7 @@
         <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100 dark:bg-gray-900">
             <div>
                 <a href="/">
-                    <img src="{{ asset('storage/app/public/logot.png') }}" alt="Profit Maximization Consultancy Logo" class="h-40 w-auto object-contain sm:h-52" />
+                    <img src="{{ asset('storage/app/public/logot.png') }}" alt="Profit Maximization Consultancy Logo" class="h-36 w-auto object-contain sm:h-44" />
                 </a>
             </div>
 
